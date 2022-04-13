@@ -7,6 +7,10 @@
     <link rel="icon" type="" href="">
     <script src="https://kit.fontawesome.com/8150933af8.js"
     crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
+    <script src="js/code.js"></script>
     <title>Fashion Portal</title>
   </head>
   <body>
@@ -20,13 +24,83 @@
           <nav>
             <a href="index.html">Главная</a>
             <a href="blog.html">Блог</a>
-            <a href="newin.html">Новинки</a>
             <a href="trends.html">Тренды</a>
             <a href="catalogue.html" class="active">Каталог</a>
             <a href="quizzes.html">Тесты</a>
           </nav>
         </div>
       </header>
+    </div>
+    <div class="catalogue-main-section">
+      <div class="shop-by-bar">
+        <h2>ИСКАТЬ ПО СТИЛЮ</h2>
+        <h2>ИСКАТЬ ПО СЕЗОНУ</h2>
+      </div>
+      <div class="by-style-options">
+        <p>Повседневный</p>
+        <p>Деловой</p>
+        <p>Спортивный</p>
+        <p>Вечерний</p>
+        <p>Романтичный</p>
+        <p>Современный</p>
+        <p>Подростковый</p>
+      </div>
+      <div class="filters-section">
+        <div class="price-range-slider">
+          <p class="range-value">
+            <input type="text" id="amount" readonly>
+          </p>
+          <div id="slider-range" class="range-bar"></div>
+        </div>
+        <span class="dropdown-filter">
+          <select>
+            <option>Все цвета</option>
+            <option>Черный</option>
+            <option>Белый</option>
+            <option>Серый</option>
+            <option>Голубой</option>
+            <option>Синий</option>
+            <option>Зеленый</option>
+            <option>Красный</option>
+            <option>Желтый</option>
+            <option>Коричневый</option>
+            <option>Бежевый</option>
+            <option>Оранжевый</option>
+            <option>Розовой</option>
+            <option>Фиолетовый</option>
+            <option>Металлический</option>
+          </select>
+        </span>
+        <span class="dropdown-filter">
+          <select>
+            <option>Все категории</option>
+            <option>Блузы и рубашки</option>
+            <option>Боди</option>
+            <option>Брюки</option>
+            <option>Верхняя одежда</option>
+            <option>Вязаные вещи</option>
+            <option>Джинсы</option>
+            <option>Домашняя одежда</option>
+            <option>Комбинезоны</option>
+            <option>Костюмы</option>
+            <option>Купальники</option>
+            <option>Носки, колготки</option>
+            <option>Пиджаки</option>
+            <option>Платья</option>
+            <option>Спортивные костюмы</option>
+            <option>Толстовки</option>
+            <option>Топы и майки</option>
+            <option>Футболки</option>
+            <option>Шорты</option>
+            <option>Юбки</option>
+          </select>
+        </span>
+        <span class="dropdown-filter">
+          <select disabled>
+            <option>Все бренды</option>
+          </select>
+        </span>
+      </div>
     </div>
   </body>
 </html>
