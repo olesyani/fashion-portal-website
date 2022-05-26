@@ -68,7 +68,7 @@ header {
   padding: 6px 16px;
 }
 
-.article-row, .item-row {
+#article-row, .item-row {
   padding: 16px;
   text-align: center;
   display: flex;
@@ -138,7 +138,12 @@ header {
 
 .article-header {
   padding-top: 10px;
-  font-size: 12px;
+  font-size: 10px;
+}
+
+.article-header h2 a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .item-column {
@@ -277,7 +282,7 @@ footer {
 
 /* BLOG PAGE */
 
-.blog-section {
+#blog-section {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 24px;
@@ -317,6 +322,11 @@ footer {
   border-bottom: 0.5px solid #7b7b7b;
   padding-bottom: 12px;
   font-size: 18px;
+}
+
+.blog-header h2 a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .blog-source a {

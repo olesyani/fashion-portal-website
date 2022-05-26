@@ -2,11 +2,12 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- png only, no jpg/jpeg -->
     <link rel="icon" type="" href="">
     <script src="https://kit.fontawesome.com/8150933af8.js"
     crossorigin="anonymous"></script>
+    <script src="js/homepagesync.js"></script>
     <title>Fashion Portal</title>
   </head>
   <body>
@@ -20,7 +21,6 @@
           <nav>
             <a href="index.html" class="active">Главная</a>
             <a href="blog.html">Блог</a>
-            <a href="trends.html">Тренды</a>
             <a href="catalogue.html">Каталог</a>
             <a href="quizzes.html">Тесты</a>
           </nav>
@@ -28,51 +28,8 @@
       </header>
     </div>
     <div class="main-section">
-      <div class="section-header">Популярные статьи</div>
-      <div class="article-row">
-        <div class="article-column">
-          <div class="article-card">
-            <img src="images/img1.jpeg" alt="">
-          </div>
-          <div class="article-header">Здесь должно быть название статьи</div>
-        </div>
-        <div class="article-column">
-          <div class="article-card">
-            <img src="images/img2.jpeg" alt="">
-          </div>
-          <div class="article-header">
-            Здесь должно быть очень длинное название статьи, которое занимает
-             много строк
-          </div>
-        </div>
-        <div class="article-column">
-          <div class="article-card">
-            <img src="images/img3.jpeg" alt="">
-          </div>
-          <div class="article-header">Здесь должно быть название статьи</div>
-        </div>
-        <div class="article-column">
-          <div class="article-card">
-            <img src="images/img4.jpeg" alt="">
-          </div>
-          <div class="article-header">Название статьи</div>
-        </div>
-        <div class="article-column">
-          <div class="article-card">
-            <img src="images/img5.jpeg" alt="">
-          </div>
-          <div class="article-header">Здесь должно быть название статьи</div>
-        </div>
-        <div class="article-column">
-          <div class="article-card">
-            <img src="images/img2.jpeg" alt="">
-          </div>
-          <div class="article-header">
-            Здесь должно быть очень длинное название статьи, которое занимает
-             много строк
-          </div>
-        </div>
-      </div>
+      <div class="section-header">Новые статьи</div>
+      <div id="article-row"></div>
       <div class="section-header">В тренде</div>
       <div class="item-row">
         <div class="item-column">
@@ -132,7 +89,7 @@
           Здесь должно быть название теста
         </a>
       </div>
-      <div class="section-header">Любимые бренды покупателей</div>
+      <div class="section-header">Любимые бренды пользователей</div>
       <div class="link-row">
         <a href="" class="link-title">website.com</a>
         <a href="" class="link-title">website.com</a>
