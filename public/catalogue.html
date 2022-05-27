@@ -10,7 +10,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
-    <script src="js/code.js"></script>
+    <script src="js/catalogue.js"></script>
     <title>Fashion Portal</title>
   </head>
   <body>
@@ -32,17 +32,27 @@
     </div>
     <div class="catalogue-main-section">
       <div class="shop-by-bar">
-        <h2>ИСКАТЬ ПО СТИЛЮ</h2>
-        <h2>ИСКАТЬ ПО СЕЗОНУ</h2>
+        <a href="#" id="style" class="active" data-filter="by-style" onclick="byStyle()">
+          ИСКАТЬ ПО СТИЛЮ
+        </a>
+        <a href="#" id="season" data-filter="by-season" onclick="bySeason()">
+          ИСКАТЬ ПО СЕЗОНУ
+        </a>
       </div>
-      <div class="by-style-options">
-        <p>Повседневный</p>
-        <p>Деловой</p>
-        <p>Спортивный</p>
-        <p>Вечерний</p>
-        <p>Романтичный</p>
-        <p>Современный</p>
-        <p>Подростковый</p>
+      <div id="by-style-options">
+        <a href="#" class="btn active" data-filter="casual">Повседневный</a>
+        <a href="#" class="btn active" data-filter="formal">Деловой</a>
+        <a href="#" class="btn active" data-filter="sporty">Спортивный</a>
+        <a href="#" class="btn active" data-filter="night-out">Вечерний</a>
+        <a href="#" class="btn active" data-filter="romantic">Романтичный</a>
+        <a href="#" class="btn active" data-filter="modern">Современный</a>
+        <a href="#" class="btn active" data-filter="teenage">Подростковый</a>
+      </div>
+      <div id="by-season-options">
+        <a href="#" class="btn active" data-filter="winter">Зима</a>
+        <a href="#" class="btn active" data-filter="spring">Весна</a>
+        <a href="#" class="btn active" data-filter="summer">Лето</a>
+        <a href="#" class="btn active" data-filter="autumn">Осень</a>
       </div>
       <div class="filters-section">
         <div class="price-range-slider">
