@@ -5,12 +5,9 @@
     <link rel="stylesheet" href="/css/style.css">
     <!-- png only, no jpg/jpeg -->
     <link rel="icon" type="" href="">
-    <script src="https://kit.fontawesome.com/8150933af8.js"
-    crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'>
-    <script src="js/catalogue.js"></script>
     <title>Fashion Portal</title>
   </head>
   <body>
@@ -18,7 +15,7 @@
       <header>
         <div>
           <a lang="en" class="logo" id="Fashion-Portal"
-          href="index.html">FASHION PORTAL</a>
+          href="index.html"><h1>FASHION PORTAL</h1></a>
         </div>
         <div class="pages">
           <nav>
@@ -32,29 +29,31 @@
     </div>
     <div class="catalogue-main-section">
       <div class="shop-by-bar">
-        <a href="#" id="style" class="active" data-filter="by-style" onclick="byStyle()">
-          ИСКАТЬ ПО СТИЛЮ
-        </a>
-        <a href="#" id="season" data-filter="by-season" onclick="bySeason()">
+        <a href="#" id="season" class="active" data-filter="by-season" onclick="bySeason()">
           ИСКАТЬ ПО СЕЗОНУ
+        </a>
+        <a href="#" id="style" data-filter="by-style" onclick="byStyle()">
+          ИСКАТЬ ПО СТИЛЮ
         </a>
       </div>
       <div id="by-style-options">
-        <a href="#" class="btn active" data-filter="casual">Повседневный</a>
-        <a href="#" class="btn active" data-filter="formal">Деловой</a>
-        <a href="#" class="btn active" data-filter="sporty">Спортивный</a>
-        <a href="#" class="btn active" data-filter="night-out">Вечерний</a>
-        <a href="#" class="btn active" data-filter="romantic">Романтичный</a>
-        <a href="#" class="btn active" data-filter="modern">Современный</a>
-        <a href="#" class="btn active" data-filter="teenage">Подростковый</a>
+        <a href="#" class="btn" data-filter="" onclick="filterInUse(this)">Все</a>
+        <a href="#" class="btn" data-filter="casual" onclick="filterInUse(this)">Повседневный</a>
+        <a href="#" class="btn" data-filter="formal" onclick="filterInUse(this)">Деловой</a>
+        <a href="#" class="btn" data-filter="sporty" onclick="filterInUse(this)">Спортивный</a>
+        <a href="#" class="btn" data-filter="night-out" onclick="filterInUse(this)">Вечерний</a>
+        <a href="#" class="btn" data-filter="romantic" onclick="filterInUse(this)">Романтичный</a>
+        <a href="#" class="btn" data-filter="modern" onclick="filterInUse(this)">Современный</a>
+        <a href="#" class="btn" data-filter="teenage" onclick="filterInUse(this)">Подростковый</a>
       </div>
       <div id="by-season-options">
-        <a href="#" class="btn active" data-filter="winter">Зима</a>
-        <a href="#" class="btn active" data-filter="spring">Весна</a>
-        <a href="#" class="btn active" data-filter="summer">Лето</a>
-        <a href="#" class="btn active" data-filter="autumn">Осень</a>
+        <a href="#" class="btn active" data-filter="" onclick="filterInUse(this)">Все</a>
+        <a href="#" class="btn" data-filter="winter" onclick="filterInUse(this)">Зима</a>
+        <a href="#" class="btn" data-filter="spring" onclick="filterInUse(this)">Весна</a>
+        <a href="#" class="btn" data-filter="summer" onclick="filterInUse(this)">Лето</a>
+        <a href="#" class="btn" data-filter="autumn" onclick="filterInUse(this)">Осень</a>
       </div>
-      <div class="filters-section">
+      <div class="filters-section" id="f-section">
         <div class="price-range-slider">
           <p class="range-value">
             <input type="text" id="amount" readonly>
@@ -62,54 +61,58 @@
           <div id="slider-range" class="range-bar"></div>
         </div>
         <span class="dropdown-filter">
-          <select>
-            <option>Все цвета</option>
-            <option>Черный</option>
-            <option>Белый</option>
-            <option>Серый</option>
-            <option>Голубой</option>
-            <option>Синий</option>
-            <option>Зеленый</option>
-            <option>Красный</option>
-            <option>Желтый</option>
-            <option>Коричневый</option>
-            <option>Бежевый</option>
-            <option>Оранжевый</option>
-            <option>Розовой</option>
-            <option>Фиолетовый</option>
-            <option>Металлический</option>
+          <select id="colors">
+            <option value="">Все цвета</option>
+            <option value="black">Черный</option>
+            <option value="white">Белый</option>
+            <option value="gray">Серый</option>
+            <option value="blue">Синий</option>
+            <option value="green">Зеленый</option>
+            <option value="red">Красный</option>
+            <option value="yellow">Желтый</option>
+            <option value="brown">Коричневый</option>
+            <option value="beige">Бежевый</option>
+            <option value="orange">Оранжевый</option>
+            <option value="pink">Розовой</option>
+            <option value="purple">Фиолетовый</option>
+            <option value="metallic">Металлический</option>
           </select>
         </span>
         <span class="dropdown-filter">
-          <select>
-            <option>Все категории</option>
-            <option>Блузы и рубашки</option>
-            <option>Боди</option>
-            <option>Брюки</option>
-            <option>Верхняя одежда</option>
-            <option>Вязаные вещи</option>
-            <option>Джинсы</option>
-            <option>Домашняя одежда</option>
-            <option>Комбинезоны</option>
-            <option>Костюмы</option>
-            <option>Купальники</option>
-            <option>Носки, колготки</option>
-            <option>Пиджаки</option>
-            <option>Платья</option>
-            <option>Спортивные костюмы</option>
-            <option>Толстовки</option>
-            <option>Топы и майки</option>
-            <option>Футболки</option>
-            <option>Шорты</option>
-            <option>Юбки</option>
+          <select id="categories">
+            <option value="">Все категории</option>
+            <option value="blouse">Блузы и рубашки</option>
+            <option value="bodysuit">Боди</option>
+            <option value="trousers">Брюки</option>
+            <option value="outwear">Верхняя одежда</option>
+            <option value="knit">Вязаные вещи</option>
+            <option value="jeans">Джинсы</option>
+            <option value="homewear">Домашняя одежда</option>
+            <option value="jumpsuit">Комбинезоны</option>
+            <option value="suit">Костюмы</option>
+            <option value="socks">Носки, колготки</option>
+            <option value="jacket">Пиджаки</option>
+            <option value="dress">Платья</option>
+            <option value="bag">Сумки</option>
+            <option value="sweatshirt">Толстовки</option>
+            <option value="top">Топы и майки</option>
+            <option value="shorts">Шорты</option>
+            <option value="skirt">Юбки</option>
           </select>
         </span>
         <span class="dropdown-filter">
-          <select disabled>
-            <option>Все бренды</option>
+          <select id="brands">
+            <option value="">Все бренды</option>
+            <option value="GATE31">GATE31</option>
+            <option value="NNEDRE">NNEDRE</option>
+            <option value="USHATAVA">USHATAVA</option>
           </select>
         </span>
       </div>
+      <div id="products-container">
+      </div>
     </div>
+    <script src="data/clothes.js"></script>
+    <script src="js/catalogue.js"></script>
   </body>
 </html>

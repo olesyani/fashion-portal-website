@@ -3,20 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css">
-    <!-- png only, no jpg/jpeg -->
     <link rel="icon" type="" href="">
-    <script src="https://kit.fontawesome.com/8150933af8.js"
-    crossorigin="anonymous"></script>
-    <script src="js/homepagesync.js"></script>
     <title>Fashion Portal</title>
   </head>
   <body>
     <div class="main-header">
       <header>
-        <div>
-          <a lang="en" class="logo" id="Fashion-Portal"
-          href="index.html">FASHION PORTAL</a>
-        </div>
+        <a lang="en" class="logo" id="Fashion-Portal"
+        href="index.html"><h1>FASHION PORTAL</h1></a>
         <div class="pages">
           <nav>
             <a href="index.html" class="active">Главная</a>
@@ -31,80 +25,19 @@
       <div class="section-header">Новые статьи</div>
       <div id="article-row"></div>
       <div class="section-header">В тренде</div>
-      <div class="item-row">
-        <div class="item-column">
-          <div class="item-card">
-            <img src="images/item1.png" alt="">
-          </div>
-        </div>
-        <div class="item-column">
-          <div class="item-card">
-            <img src="images/item2.png" alt="">
-          </div>
-        </div>
-        <div class="item-column">
-          <div class="item-card">
-            <img src="images/item3.png" alt="">
-          </div>
-        </div>
-        <div class="item-column">
-          <div class="item-card">
-            <img src="images/item4.png" alt="">
-          </div>
-        </div>
-        <div class="item-column">
-          <div class="item-card">
-            <img src="images/item5.png" alt="">
-          </div>
-        </div>
-        <div class="item-column">
-          <div class="item-card">
-            <img src="images/item6.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="section-header">Популярные тесты</div>
-      <div class="link-row">
-        <a href="" class="link-title">
-          Здесь должно быть название теста
-        </a>
-        <a href="" class="link-title">
-          Здесь должно быть очень длинное название статьи, которое занимает
-           много строк
-        </a>
-        <a href="" class="link-title">
-          Здесь должно быть название теста
-        </a>
-        <a href="" class="link-title">
-          Здесь должно быть название теста
-        </a>
-        <a href="" class="link-title">
-          Здесь должно быть очень длинное название статьи, которое занимает
-           много строк
-        </a>
-        <a href="" class="link-title">
-          Здесь должно быть название теста
-        </a>
-        <a href="" class="link-title">
-          Здесь должно быть название теста
-        </a>
-      </div>
-      <div class="section-header">Любимые бренды пользователей</div>
-      <div class="link-row">
-        <a href="" class="link-title">website.com</a>
-        <a href="" class="link-title">website.com</a>
-        <a href="" class="link-title">website.com</a>
-        <a href="" class="link-title">website.com</a>
-        <a href="" class="link-title">website.com</a>
-        <a href="" class="link-title">website.com</a>
-        <a href="" class="link-title">website.com</a>
-        <a href="" class="link-title">website.com</a>
-      </div>
+      <div id="item-row"></div>
+      <div class="section-header">Тесты, набирающие популярность</div>
+      <div id="quiz-link-row"></div>
+      <div class="section-header">Популярные бренды</div>
+      <div id="brand-link-row"></div>
     </div>
     <div class="bottom">
       <footer lang="en">
         Copyright Olesia Nikolaeva <br>
       </footer>
     </div>
+    <script src="data/quizzes.js"></script>
+    <script src="data/clothes.js"></script>
+    <script src="js/homepage.js"></script>
   </body>
 </html>

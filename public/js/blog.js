@@ -33,7 +33,7 @@ function appendData(data) {
       var div_source = document.createElement("div");
       div_source.className = "blog-source";
       var source = document.createElement("a");
-      source.innerHTML = "The Noisetier";
+      source.innerHTML = data.source[i];
       source.href = data.article_link[i];
       div_source.appendChild(source);
 
